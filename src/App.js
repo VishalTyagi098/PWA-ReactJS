@@ -17,7 +17,13 @@ function App() {
 
   return (
     <div className="App">
-      app
+      {chatData?.map((chat,i)=>{
+        return(
+          <div key={chat.id} className="">
+            <div style={{margin:"10px"}}>{chat.message}</div>
+          </div>
+        )
+      })}
     </div>
   );
 }
