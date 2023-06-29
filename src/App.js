@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useState,useEffect} from "react";
+import { getAllChats } from "./api/chats";
 
 function App() {
+  const [chatData, setChatData] = useState([]);
+
+  useEffect(() => {
+    async function fetchData(){
+      const data=await getAllChats();
+      setChatData(data?.chats);
+    }
+    fetchData();
+  }, [])
+
+  
+  console.log(chatData);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      app
     </div>
   );
 }
