@@ -13,10 +13,11 @@ const ChatApp = ({ data }) => {
           <div className="col-md-10 col-lg-8 col-xl-6">
             <div className="card" id="chat2">
               <div className="card-header d-flex justify-content-between align-items-center p-3">
-                <div className="d-flex w-50 justify-content-around">
-                  <img src={profile} alt="image" className="rounded-full w-25"/>
-                  <div className="d-flex flex-column">
-                    <p>from <strong>IGI Airport, T3</strong></p>
+                <div className="d-flex justify-content-around">
+                  <img src={profile} alt="image" className="rounded-full w-10"/>
+                  <div className="d-flex mx-3">
+                    <p>From <strong>IGI Airport, T3</strong></p>
+                    <br />
                     <p>To <strong>Sector 28</strong></p>
                   </div>
                 </div>
