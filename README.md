@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# Chat Screen Progressive Web Application (PWA) using ReactJS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains a Progressive Web Application (PWA) developed using ReactJS and React Bootstrap. The goal of this assignment was to create a chat screen that functions as a PWA on both Android and iOS devices.
 
-## Available Scripts
+## Problem Description
 
-In the project directory, you can run:
+The task involved developing a single-page PWA that closely resembles the provided UI. The PWA should include a chat screen that displays the most recent chat message. When the user scrolls above a certain threshold, the application should make an API call to retrieve older chats, incrementing the page number each time. However, there is no need to update the chat headers on subsequent API calls.
 
-### `npm start`
+## Solution Approach
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To solve the problem, I used the following approach:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. **PWA Development**: I built a complete PWA using ReactJS and React Bootstrap. The application is designed to be installable on both desktop and mobile devices, supporting Android and iOS platforms.
 
-### `npm test`
+2. **Service Workers and Manifest**: I implemented service workers to enable offline functionality and caching of assets. Additionally, I added a manifest.json file to provide app metadata and allow users to install the PWA on their devices.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. **API Integration**: I used the provided API endpoint (`https://qa.corider.in/assignment/chat?page=0`) to fetch chat data. The application makes an initial API call to retrieve the most recent chat message. As the user scrolls up, the application incrementally calls the API with an incremented page number to fetch older chats.
 
-### `npm run build`
+## Live Demo
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+You can access the live version of the application at the following URL: [https://pwa-react-js.vercel.app/](https://pwa-react-js.vercel.app/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Please note that the live demo may vary slightly from the provided UI, as it is a representation of the completed assignment.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Images
 
-### `npm run eject`
+![1](https://github.com/VishalTyagi098/PWA-ReactJS/assets/87750186/5ea4b85d-fcd0-4450-a395-a06bc67a629a)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![2](https://github.com/VishalTyagi098/PWA-ReactJS/assets/87750186/a38feea1-a6f7-4d1e-8d79-df37347df6d3)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![3](https://github.com/VishalTyagi098/PWA-ReactJS/assets/87750186/0b9faaa7-881c-44a6-8fd5-e71fe4523f6d)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Working in Android:-
+![4](https://github.com/VishalTyagi098/PWA-ReactJS/assets/87750186/00247100-d318-42f7-a659-3a68c742e394)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Instructions
 
-### Code Splitting
+To run the application locally, follow these steps:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Clone the repository to your local machine.
+2. Install Node.js if you haven't already.
+3. Navigate to the project directory.
+4. Run `npm install` to install the required dependencies.
+5. Run `npm start` to start the development server.
+6. Open your browser and navigate to `http://localhost:3000` to access the application.
 
-### Analyzing the Bundle Size
+You can also build the application using `npm run build` and deploy it to a hosting platform of your choice.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Technologies Used
 
-### Making a Progressive Web App
+The following technologies were used to develop the Chat Screen PWA:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- ReactJS: JavaScript library for building user interfaces.
+- React Bootstrap: UI library for React applications.
+- Service Workers: Enables offline functionality and caching of assets.
+- Manifest.json: Provides app metadata and enables PWA installation.
 
-### Advanced Configuration
+Please refer to the `package.json` file for the complete list of dependencies.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Conclusion
 
-### Deployment
+The Chat Screen Progressive Web Application (PWA) developed in this project provides a user-friendly and installable chat experience on both Android and iOS devices. It leverages the capabilities of ReactJS and React Bootstrap to deliver a responsive and efficient user interface.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Feel free to explore the code and test the application locally or on the live demo. Any feedback or suggestions for improvement are greatly appreciated.
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thank you for your attention.
