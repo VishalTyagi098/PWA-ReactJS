@@ -15,14 +15,7 @@ function App() {
 
   
   return (
-    <div className="App">
-      {/* {chatData?.map((chat,i)=>{
-        return(
-          <div key={chat.id} className="">
-            <div style={{margin:"10px"}}>{chat.message}</div>
-          </div>
-        )
-      })} */}
+    <div className="App vh-100">
       <ChatApp data={chatData}/>
     </div>
   );

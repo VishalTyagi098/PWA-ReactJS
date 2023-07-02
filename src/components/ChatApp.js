@@ -1,33 +1,32 @@
 import React from "react";
+import profile from './profile.png'
 import "./ChatApp.css";
 import ChatRecieve from "./ChatRecieve";
 import ChatSend from "./ChatSend";
 
 const ChatApp = ({ data }) => {
-  console.log(data);
 
   return (
     <section style={{ backgroundColor: "#eee" }}>
-      <div className="container py-5">
+      <div className="container py-5 vh-100">
         <div className="row d-flex justify-content-center">
           <div className="col-md-10 col-lg-8 col-xl-6">
             <div className="card" id="chat2">
               <div className="card-header d-flex justify-content-between align-items-center p-3">
-                <h5 className="mb-0">Chat</h5>
-                <button
-                  type="button"
-                  className="btn btn-primary btn-sm"
-                  data-mdb-ripple-color="dark"
-                >
-                  Let's Chat App
-                </button>
+                <div className="d-flex w-50 justify-content-around">
+                  <img src={profile} alt="image" className="rounded-full w-25"/>
+                  <div className="d-flex flex-column">
+                    <p>from <strong>IGI Airport, T3</strong></p>
+                    <p>To <strong>Sector 28</strong></p>
+                  </div>
+                </div>
               </div>
               <div
                 className="card-body"
                 data-mdb-perfect-scrollbar="true"
                 style={{
                   position: "relative",
-                  height: "400px",
+                  height: "500px",
                   overflowY: "auto",
                 }}
               >
@@ -40,26 +39,27 @@ const ChatApp = ({ data }) => {
                   </p>
                 </div>
 
-                {/*                      */}
+                {/*        WORKING              */}
 
-                {data?.map((chat,i)=>{
-                      return(
-                        <div key={chat.id} className="">
-                          <ChatRecieve />
-                          <ChatSend />
-                        </div>
-                      )
-                    })}
+                {data?.map((chat, i) => {
+                  return (
+                    <div key={chat.id}>
+                      {chat.sender.self===true?
+                      <ChatSend message={chat.message} image={chat.sender.image} time={chat.time}/>
+                      :
+                      <ChatRecieve message={chat.message} image={chat.sender.image} time={chat.time}/>
+                      }
+                    </div>
+                  );
+                })}
 
-                {/*                      */}
-                
-
+                {/*         WORKING             */}
               </div>
               <div className="card-footer text-muted d-flex justify-content-start align-items-center p-3">
                 <img
-                  src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3-bg.webp"
+                  src="https://fastly.picsum.photos/id/1072/160/160.jpg?hmac=IDpbpA5neYzFjtkdFmBDKXwgr-907ewXLa9lLk9JuA8"
                   alt="avatar 3"
-                  style={{ width: "40px", height: "100%" }}
+                  style={{ width: "40px", height: "100%",borderRadius:"100%" }}
                 />
                 <input
                   type="text"
